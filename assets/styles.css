@@ -1,0 +1,361 @@
+@font-face {
+  font-family: 'Vysokepismo';
+  src: url('Vysokepismo-Regular.woff2') format('woff2'),
+      url('Vysokepismo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+ 
+}
+
+body, html {
+  width: 100%;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+body {
+  animation: bodybackground 360s infinite alternate; 
+
+}
+
+@keyframes bodybackground {
+  0% {
+    background: white;
+  }
+  10% {
+    background: #EDAFB8;
+  }
+  20% {
+    background: white;
+  }
+  30% {
+    background: #DEDBD2;
+  }
+  40% {
+    background: white;
+  }
+  50% {
+    background: #F7E1D7;
+  }
+  60% {
+    background: white;
+  }
+  70% {
+    background: #B0C4B1;
+  }
+  80% {
+    background: white;
+  }
+  90% {
+    background: #faffc7;
+  }
+  100% {
+    background: #EDAFB8;
+  }
+}
+*/
+
+* {
+  font-size: 52px;
+  font-family: 'Vysokepismo';
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-small, .text-small * {
+  font-size: 80%;
+}
+
+.btn {
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid black;
+  padding: 20px;
+}
+
+
+a {
+  text-decoration: none;
+  color: #053772;
+}
+
+hr.clear {
+  clear: both;
+  visibility: hidden;
+}
+
+h1 {
+  font-size: 250%;
+  font-weight: normal;
+  text-align: center;
+  margin: 50px 0 20px 0;
+  letter-spacing: -7px;
+}
+
+h2 {
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0 20px 0;
+  letter-spacing: -7px;
+  font-size: 200%;
+}
+
+h2 svg {
+  height: 120px;
+  left: -200px;
+  vertical-align: middle;
+}
+
+h2 * {
+
+}
+
+p {
+  text-align: center;
+}
+
+#countdown {
+  text-align: center;
+  letter-spacing: -3px;
+  color: #555;
+}
+
+
+
+section {
+  background-color: #fff;
+  min-height: 100vh;
+  z-index: -100;
+}
+
+
+.section-inner {
+  width: 90%;
+  max-width: 750px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 10;
+
+}
+
+.emphasized {
+  background-color: #EDAFB8;
+}
+.section-green {
+  background-color: #B0C4B1;
+}
+
+.section-black {
+  background-color: #333;
+  color: #FFF;
+}
+.section-black a {
+  color: #AAD2FE;
+}
+
+/*
+  background: #EDAFB8;
+  background: white;
+  background: #DEDBD2;
+  background: white;
+  background: #F7E1D7;
+  background: white;
+  background: #B0C4B1;
+  background: white;
+  background: #faffc7;
+  background: #EDAFB8;
+*/
+
+.section-x {
+    background: #F6B3A7;
+}
+
+.section-y {
+  background: #F7E1D7;
+}
+
+
+
+nav {
+  display: block;
+  text-align: center;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; 
+}
+
+.navigation .before, .navigationBottom .after {
+  visibility: visible;
+}
+
+.navigation .after, .navigationBottom .before, .navigation .active, .navigationBottom .active {
+  visibility: hidden;
+}
+
+.navigationBottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation a, .navigationBottom a {
+  display: inline-block;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 20%;
+}
+.navigation a span, .navigationBottom a span {
+  font-size: 200%;
+}
+
+.postavicky {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  width: 90%;
+  max-width: 400px;
+}
+
+@media (max-width: 899px) { 
+  nav {
+    display: none;
+  }
+}
+
+
+.image-centered {
+  display: block;
+  max-width: 450px;
+  width: 90%;
+  margin: auto;
+}
+
+.image-float-left {
+  float: left;
+  max-width: 350px;
+  width: 90%;
+  margin: auto;
+}
+
+
+path {
+  fill:none;
+  opacity:1;
+  stroke:#000000;
+  stroke-linecap:butt;
+  stroke-linejoin:miter;
+  stroke-miterlimit:10;
+  stroke-opacity:1;
+  stroke-width:9;
+}
+
+.pathWhiteBg {
+  fill: #ffffff;
+}
+
+.svg-white path {
+  stroke:#FFFFFF;
+}
+
+path.animatedPath {
+  visibility: hidden;
+}
+
+.section-trigger {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  visibility: hidden;
+  position: relative;
+}
+
+.section-trigger-top {
+  top: 150px;
+}
+
+.section-trigger-bottom {
+  bottom: 150px;
+}
+
+.gauc {
+  width: 100%;
+  background: inherit;
+  position: fixed;
+  display: block;
+  bottom: 0;
+
+
+
+  left: 0;
+  right: 0;
+}
+
+.gauc, .gauc * {
+  pointer-events: none; 
+}
+
+.gauc > svg {
+  display: block;
+  width: 85%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+dl {
+  display: block;
+  width: 70%;
+  margin: auto;
+
+}
+
+dt {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.link-back {
+  display: block;
+  width: 100%;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  text-align: center;
+  list-style-type: none;
+}
+
+.img-right {
+  float: right;
+  max-width: 100px;
+  margin: 0 15px;
+}
+
+hr.clean {
+  clear: both;
+  visibility: hidden;
+}
