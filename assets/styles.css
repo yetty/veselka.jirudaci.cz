@@ -132,7 +132,7 @@ p {
 
 section {
   background-color: #fff;
-  min-height: 100vh;
+  min-height: max(800px, 100vh);
   z-index: -100;
 }
 
