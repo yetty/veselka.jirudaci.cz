@@ -44,7 +44,7 @@ $(document).ready(function () {
       "Místo, parkování & doprava": "Place, parking & transportation",
       "Na tom ještě pracujeme.<br> Včas vám dáme vědět, co a jak.": "We are still working on that.<br> We'll let you know more soon.",
       "Oblečení": "Dress code",
-      "Svatba se bude konat venku. Oblečte se pěkně, pohodlně a podle počasí. Očekáváme krásný letní den, tak si, pánové, vezměte nějakou\n      sváteční košili*, a dámy - vy si obvykle dokážete dobře poradit. Cokoli v barvách louky nebude šlápnutí vedle.": "The wedding will take place outside. Dress nicely, comfortably and according to the weather. We expect a nice and sunny day; so, gentlemen, you can wear your Sunday shirt and, ladies, you are usually very good at this. Anything in the colours of wild flowers won't look out of place.",
+      "Svatba se bude konat venku. Oblečte se pěkně, pohodlně a podle počasí. Očekáváme krásný letní den, tak si, pánové, vezměte nějakou\n      sváteční košili*, a dámy - vy si obvykle dokážete dobře poradit. Cokoli v barvách rozkvetlé louky nebude šlápnutí vedle.": "The wedding will take place outside. Dress nicely, comfortably and according to the weather. We expect a nice and sunny day; so, gentlemen, you can wear your Sunday shirt and, ladies, you are usually very good at this. Anything in the colours of wild flowers won't look out of place.",
       "*ale žádné džíny.": " ",
       "Ubytování & přespávání": "Accommodation & Staying overnight",
       "Mladí a stateční mohou přespat na louce.": "The young and courageous can sleep outside under the stars.",
