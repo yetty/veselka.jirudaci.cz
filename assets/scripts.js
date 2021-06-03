@@ -5,14 +5,14 @@ var allTranslations = {};
 
 
 $(document).ready(function () {
-  
+
   var userLang = (navigator.language || navigator.userLanguage).substr(0,2);
-  
-  translations = {  
+
+  translations = {
     'cs': {},
     'cs-CZ': {},
     'sk': {},
-    'sk-SK': {},  
+    'sk-SK': {},
     'en': {
       "Jířa a Juda mají veselku!": "Jířa and Juda are getting married!",
       "Už je to tak, budeme se brát. Bude se jíst, zpívat i tančit (možná i ženich bude). Zkrátka bude veselo.": "That's right! We will all be eating, singing and dancing. It will be a joyful time.",
@@ -58,11 +58,11 @@ $(document).ready(function () {
       "Vyplnit formulář": "Fill out the form",
       "Kontakt": "Contact",
       "Ozvěte se nám. Ať už s dotazem, přáním nebo s povzbuzením. Budeme za to rádi.": "Contact us. Whether you have any questions, wishes or encouragement, we will be happy."
-    },    
+    },
   }
-  
 
-  var currentTranslation = new Proxy(translations[userLang] || translations['en'], {
+
+  var currentTranslation = translations['cs'], {
     get: function(target, name) {
       allTranslations[name] = target[name] || "";
       return target[name] || name;
@@ -73,7 +73,7 @@ $(document).ready(function () {
     success: function () {
 
 
-      
+
       function hashChange() {
           var hash = window.location.hash;
           var els = $("nav a[href$='"+hash+"']");
@@ -83,7 +83,7 @@ $(document).ready(function () {
           $('section').removeClass('active');
           $(hash).addClass('active');
           $(".animatedPath").css('visibility', 'hidden');
-       
+
           setTimeout(function () {
             $("section.active .animatedPath").css('visibility', 'visible');
             anime({
@@ -98,45 +98,45 @@ $(document).ready(function () {
           }, 1000);
 
 
-      
+
       }
-      
+
       hashChange();
       $(window).on('hashchange', hashChange);
       moveFigures();
-      
 
-      
-      
+
+
+
       function moveFigures() {
         //$("section").css("padding-bottom", $(".gauc").height());
 
-        
+
         var scroll = $(window).scrollTop();
         var documentHeight = $(document).height();
         var position = scroll / (documentHeight - $(window).height());
         var translateX = 340 * position;
         //console.log(translateX, position);
-    
-        
-        
-        $(".juda").css("transform", `translateX(${translateX}px)`); 
-        $(".jira").css("transform", `translateX(-${translateX}px)`);  
+
+
+
+        $(".juda").css("transform", `translateX(${translateX}px)`);
+        $(".jira").css("transform", `translateX(-${translateX}px)`);
       }
-      
+
       $(document).on('scroll', function () {
         moveFigures();
 
-        
-        
-        
+
+
+
         var lastVisible;
         $('section .section-trigger').each(function () {
           if($(this).visible(true) == true) {
             lastVisible = $(this).parent();
           }
         });
-        
+
         if(lastVisible) {
           var hash = '#'+lastVisible.attr('id');
           if (window.location.hash != hash) {
@@ -145,12 +145,12 @@ $(document).ready(function () {
           }
         }
       });
-      
-         console.log(JSON.stringify(allTranslations, null, 2)); 
+
+         console.log(JSON.stringify(allTranslations, null, 2));
 
     }
   });
-  
+
   /*
   var end = new Date('06/05/2021 2:00 PM');
 
@@ -174,15 +174,15 @@ $(document).ready(function () {
         var hours = Math.ceil((distance % _day) / _hour);
         var minutes = Math.floor((distance % _hour) / _minute);
         var seconds = Math.floor((distance % _minute) / _second);
-        
-        if (hours == 1) { 
+
+        if (hours == 1) {
           var txtHours = '1 hodinu';
         } else if (hours == 0 || hours >= 5) {
           var txtHours = hours + ' hodin';
         } else {
           var txtHours = hours + ' hodiny';
         }
-        
+
         document.getElementById('countdown').innerHTML = 'už za ' + days + ' dní' + ' a ' + txtHours;
     }
 
