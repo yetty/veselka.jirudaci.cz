@@ -62,10 +62,10 @@ $(document).ready(function () {
   }
 
 
-  var currentTranslation = translations['cs'], {
+  var currentTranslation = new Proxy(translations[userLang] || translations['en'], {
     get: function(target, name) {
       allTranslations[name] = target[name] || "";
-      return target[name] || name;
+      return name;
     }
   });
 
